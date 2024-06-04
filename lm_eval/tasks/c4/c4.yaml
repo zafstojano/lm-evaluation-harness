@@ -1,0 +1,19 @@
+group:
+  - c4
+dataset_path: allenai/c4
+output_type: loglikelihood_rolling
+validation_split: validation
+test_split: test
+doc_to_text: ""
+doc_to_target: text
+process_results: !function preprocess_c4.process_results
+should_decontaminate: true
+doc_to_decontamination_query: "{{text}}"
+metric_list:
+  - metric: word_perplexity
+  - metric: byte_perplexity
+  - metric: bits_per_byte
+metadata:
+  version: 1
+dataset_kwargs:
+  trust_remote_code: true
