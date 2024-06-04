@@ -2,8 +2,9 @@ group:
   - c4
 dataset_path: allenai/c4
 output_type: loglikelihood_rolling
+training_split: null
 validation_split: validation
-test_split: test
+test_split: null
 doc_to_text: ""
 doc_to_target: text
 process_results: !function preprocess_c4.process_results
